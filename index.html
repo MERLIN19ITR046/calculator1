@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>CGPAcalculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="cg.js"></script>
+</head>
+<style>
+
+</style>
+</head>
+<body style="text-align:center;background-color:burlywood;">
+
+ 
+<h1>CGPA Calculator</h1>
+  
+
+<div class="center">
+    <p id="enter">Enter the subject  course credits and grade points of semester: </p>
+   
+ <table  align="center" style="background-color:bisque" >
+    <thead>
+        <tr>
+            <th>Subjects</th>
+            <th>Course credits</th>
+            <th>Grade points</th>
+           
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+        <td> subject 1</td>
+        <td><input type="text" id="sub1a" /></td>
+        <td><input type="text" id="sub1b"  /></td>
+        </tr>
+
+
+        <tr>
+            <td> subject 2</td>
+            <td><input type="text" id="sub2a"  /></td>
+            <td><input type="text" id="sub2b" /></td>
+        </tr>
+
+        <tr>
+            <td> subject 3</td>
+            <td><input type="text" id="sub3a" /></td>
+            <td><input type="text" id="sub3b" /></td>
+        </tr>
+
+        <tr>
+            <td> subject 4</td>
+            <td><input type="text" id="sub4a"  /></td>
+            <td><input type="text" id="sub4b"/></td>
+        </tr>
+
+        <tr>
+            <td> subject 5</td>
+            <td><input type="text" id="sub5a"  /></td>
+            <td><input type="text" id="sub5b"  /></td>
+        </tr>
+        <tr>
+            <td> subject 6</td>
+            <td><input type="text" id="sub6a"  /></td>
+            <td><input type="text" id="sub6b" /></td>
+        </tr>
+        
+       
+        </tbody>
+
+</table>
+<br>
+<div class="buttons">
+    <button onclick="myFunction1()">&emsp;GPA&emsp;</button>&emsp;
+    <button onclick="cgpa()">&ensp;CGPA&ensp;</button>
+    <br>
+    <br>
+    <strong>
+      <p id="gpa"></p>&emsp;&emsp;&emsp;
+        <p id="cgpa"></p>
+    </strong>
+    
+</div>
+<button1><a href="./bill/bill.html" style="text-decoration:none"  id="button">Next</a></button1> 
+
+<script>
+   
+
+    var gpasum=0,count=0;
+    
+ 
+
+function myFunction1() {
+    let sum = 0,creditsum=0,gpa;
+for(let i=1;i<=6;i++)
+{
+    let product,credit,grade;
+    let a="sub"+i+"a";
+    let b="sub"+i+"b";
+    credit=document.getElementById(a).value;
+    grade=document.getElementById(b).value;
+    creditsum=creditsum + credit*1;
+    product= credit * grade;
+    sum=sum + product;
+ 
+   
+}
+gpa=sum/creditsum;
+gpasum =gpasum + gpa;
+count=count + 1;
+document.getElementById("gpa").innerHTML = gpa ;
+
+}
+
+function cgpa(){
+    let cgpa1= gpasum/count;
+    document.getElementById("cgpa").innerHTML = cgpa1 ;
+ }
+
+</script>
+
+
+</body>
+</html>

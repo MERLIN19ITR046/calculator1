@@ -1,0 +1,38 @@
+<html>
+        <head>
+        <title>Electricity Bill</title>
+        <link rel="stylesheet" href="style1.css">
+        <script src = "bill.js"></script>
+    
+    </head>
+    <body>
+        <div class="container">
+        <form class="sheet" method="post">
+            <h1 style="margin: 15px 0px;">Electricity Bill Calculator</h1>
+            <div class="meter" style="margin: 25px 0px;">
+                   <label style="margin: 25px 0px;"> Please Enter Meter Number:</label><input type="text" autocomplete="off" name="number" id="number" />
+                    <input type="button" name="submit" id="submit" onclick="getaction()" value="Go"/><br><br>
+                    <p id="demo"> </p>
+            </div>
+        <div id="options" style="display:none;">
+   
+        <input type='radio' name='radio' onclick='myfunction(this.value)' value='1'/><span style="margin:0px 5px;">Domestic</span>
+        <input type='radio' name='radio' onclick='myfunction(this.value)' value='2'/><span style="margin:0px 5px;"> Commercial</span>
+        </div>
+        
+        <div id="display1" style="display:none; margin: 15px 0px;">
+        <label style="margin: 15px 0px;">Please Enter Number of Units Consumed</label>
+        <input type="text" name="amount1" id="amount1" value=""/>
+        <input type="submit" name="submit1" value="submit" onclick="getamount1()"/>
+        </div>
+        <div id="display2" style="display:none; margin: 15px 0px;">
+        <label style="margin: 15px 0px;">Please Enter Number of Units Consumed</label>
+        <input type="text" autocomplete="off" name="amount2" id="amount2" value=""/>
+        <input type="submit" name="submit2" value="submit" onclick="getamount2()"/>
+        </div >     
+         <button><a href="./bmicalculator/index.html" style="text-decoration:none"  id="button">Next</a></button> 
+
+        </form>
+        </div>
+        </body>
+    </html>

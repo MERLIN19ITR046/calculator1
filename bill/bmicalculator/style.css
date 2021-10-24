@@ -1,0 +1,71 @@
+*{
+    font-family: 'Oswald', sans-serif
+}
+
+body{
+    background-image:url("./bmi.jpg ");
+    background-size: cover;
+}
+
+.container{
+    width: 400px;
+    background-color: brown;
+    position: relative;
+    display: grid;
+    top: 40%;
+    left: 50%;
+    border: 5px solid #88B169;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 25px;
+    
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+
+p{
+    color: #fff;
+}
+
+#height, #weight{
+    width: 100%;
+    height: 35px;
+    outline: none;
+}
+
+button{
+    width: 150px;
+    height: 35px;
+    margin-top: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: red;
+    color: white; 
+    font-size: 20px;
+}
+
+#result{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+#table {
+    padding-top: 40px;
+  
+    height: 100px;
+    width: 450px;
+    background-color: black;
+   
+    margin: 0 auto;
+    border: 5px solid #88B169;
+}
+
+table, th, td {
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    border: 1px solid white;
+}
